@@ -1,0 +1,12 @@
+{
+  "name": "microservice-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rolbre/microservice-demo.git",
+  "author": "Roland Breitschaft <roland.breitschaft@x-company.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "appversion-mgr": "^0.7.0",
+    "dotnet-settings": "^0.1.0"
+  }
+}

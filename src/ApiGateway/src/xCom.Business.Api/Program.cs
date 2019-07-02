@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace xCom.MicroServices.Api
+namespace xCom.Business.Api
 {
     public class Program
     {
