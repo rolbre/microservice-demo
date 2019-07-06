@@ -1,0 +1,65 @@
+version: "3.7"
+
+services:
+  bootstrap:
+    image: xcompany/service-registry:latest
+    volumes:
+      - ./bootstrap.json:/etc/consul.d/config.json
+      - bootstrap_vol:/var/lib/consul
+    expose:
+      - 8300-8302
+      - 8600
+      - 21000-21255
+    ports:
+      - 8500:8500
+    networks:
+      cluster:
+        ipv4_address: 172.25.0.2
+
+  server_1:
+    image: xcompany/service-registry:latest
+    depends_on:
+      - bootstrap
+    volumes:
+      - ./server_1.json:/etc/consul.d/config.json
+      - server_1_vol:/var/lib/consul
+    expose:
+      - 8300-8302
+      - 8500
+      - 8600
+      - 21000-21255
+    links:
+      - bootstrap
+    networks:
+      cluster:
+        ipv4_address: 172.25.0.3
+
+  server_2:
+    image: xcompany/service-registry:latest
+    depends_on:
+      - bootstrap
+    volumes:
+      - ./server_2.json:/etc/consul.d/config.json
+      - server_2_vol:/var/lib/consul
+    expose:
+      - 8300-8302
+      - 8500
+      - 8600
+      - 21000-21255
+    links:
+      - bootstrap
+    networks:
+      cluster:
+        ipv4_address: 172.25.0.4
+
+networks:
+  cluster:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.25.0.0/24"
+
+volumes:
+  bootstrap_vol:
+  server_1_vol:
+  server_2_vol:

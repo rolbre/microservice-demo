@@ -1,0 +1,12 @@
+{
+    "server": true,
+    "server_name": "svreg-srv-03",
+    "datacenter": "mydc",
+    "encrypt": "X4SYOinf2pTAcAHRhpj7dA==",
+    "log_level": "INFO",
+    "bind_addr": "172.25.0.4",
+    "start_join":[
+        "172.25.0.2",
+        "172.25.0.3"
+    ]
+}

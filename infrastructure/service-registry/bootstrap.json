@@ -1,0 +1,12 @@
+{
+    "bootstrap": true,
+    "server": true,
+    "server_name": "svreg-srv-01",
+    "bootstrap_expect": 1,
+    "datacenter": "mydc",
+    "encrypt": "X4SYOinf2pTAcAHRhpj7dA==",
+    "log_level": "INFO",
+    "bind_addr": "172.25.0.2",
+    "client_addr": "127.0.0.1 172.25.0.2",
+    "ui": true
+}
