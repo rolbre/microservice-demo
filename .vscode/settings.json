@@ -271,8 +271,6 @@
         "yourimage"
     ],
     "git-graph.fetchAvatars": true,
-    "hadolint.hadolintPath": ".vscode/hadolint-Linux-x86_64",
-    "hadolint.outputLevel": "info",
     "vssolution.altSolutionFolders": [
         "src/ApiGateway/src"
     ],
