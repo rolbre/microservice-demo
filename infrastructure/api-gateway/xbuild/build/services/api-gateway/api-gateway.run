@@ -1,3 +1,8 @@
+#!/usr/bin/execlineb -P
 
+# File will called to start your Service
 
+if { s6-test -f /opt/attain/worker/api-gateway/xCom.ApiGateway.dll }
+
+s6-setuidgid api
 dotnet /opt/attain/worker/api-gateway/xCom.ApiGateway.dll

@@ -1,0 +1,10 @@
+#!/usr/bin/execlineb -P
+
+# Main Build File for your Service
+
+s6-envdir /etc/xbuild/env.d/
+
+if { xb-log "Create Service Folders" }
+if { s6-mkdir -p /opt/attain/worker/api-gateway }
+
+if { xb-addserviceuser -u api -i 990 }

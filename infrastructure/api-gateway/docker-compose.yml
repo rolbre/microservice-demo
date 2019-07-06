@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  api:
+    image: xcompany/api-gateway:latest
+    volumes:
+      - ./client.json:/etc/consul.d/config.json
+      - ./service.json:/etc/consul.d/service.json
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      api:
+      service-registry_cluster:
+        ipv4_address: 172.25.0.5
+
+networks:
+  api:
+  service-registry_cluster:
+    external: true

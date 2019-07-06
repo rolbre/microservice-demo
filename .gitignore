@@ -1,5 +1,4 @@
 src/**/bin
 src/**/obj
 node_modules
-infrastructure/api-gateway/xbuild/rootfs/opt/aminoo/worker/api-gateway/
-src/ApiGateway/src/xCom.ApiGateway/api-gateway/xbuild/rootfs/opt/aminoo/worker/api-gateway/xCom.ApiGateway.deps.json
+infrastructure/api-gateway/xbuild/rootfs/opt/attain/worker/api-gateway/
