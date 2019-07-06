@@ -1,0 +1,3 @@
+
+
+dotnet /opt/attain/worker/api-gateway/xCom.ApiGateway.dll
